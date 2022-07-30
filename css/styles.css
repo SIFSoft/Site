@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 :root{
@@ -19,6 +20,7 @@ html{
     --color-font-light: #ffffff;
     --color-border-primary: #15262E;
     --color-border-secondary: #2C6693;
+    --color-circle-primary: #F3D2F2;
 }
 
 .header{
@@ -56,23 +58,10 @@ html{
 }
 
 .item:hover{
-    background-color: var(--color-bg-hover);
-}
-.item:hover a{
-    color: var(--color-font-secondary);
-    background-color: var(--color-bg-hover);
+    border: 1px solid var(--color-border-secondary);
+    color: var(--color-font-dark);
 }
 
-#btnInicio{
-    cursor: default;
-    background: var(--color-bg-primary);
-    border: 1px solid var(--color-border-secondary);
-}
-#btnInicio:hover a{
-    cursor: default;
-    color: var(--color-font-dark);
-    background: var(--color-bg-primary);
-}
 .item a{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -179,4 +168,66 @@ html{
     font-weight: 400;
     text-align: justify;
     letter-spacing: 0.05em;
+}
+
+.conteudo-sobre{
+    padding-top: 3em;
+    padding-left: 4em;
+    display: grid;
+
+    grid-template-areas: 
+    "text1 img"
+    "text2 img";
+
+}
+
+.conteudo-textos{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-sobre{
+    font-family: 'Roboto';
+}
+
+.text-sobre p{
+    margin-left: 2em;
+    font-size: 2vw;
+}
+
+.text-sobre h1{
+    padding-bottom: 2%;
+    font-size: 40px;
+    color: var(--color-font-primary);
+}
+
+.text1{
+    width: 60vw;
+    grid-area: text1;
+    height: 30vh;
+}
+
+.text1 p{
+    text-align: justify;
+    border-bottom: 2px dashed var(--color-border-secondary);
+    border-width: 6px;
+    padding-bottom: 2em;
+}
+
+.text2{
+    padding-top: 2em;
+    width: 60vw;
+    grid-area: text2;
+    height: 30vh;
+}
+
+.text2 p{
+    text-align: justify;
+}
+
+.img-sobre img{
+    grid-area: img;
+    width: 30vw;
+    height: 70vh;
 }
