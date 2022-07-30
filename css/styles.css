@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #217C97;
+    --color-bg-hover: #d8d8d8;
+    --color-font-primary: #FC4067;
+    --color-font-secondary: #15262E;
+    --color-font-dark: #000000;
+    --color-font-light: #ffffff;
+    --color-border-primary: #15262E;
+    --color-border-secondary: #2C6693;
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-primary);
+    padding: 0 2.5vw;
+    width: 100%;
+    height: 7vh;
+}
+
+.logoImg{
+    cursor: pointer;
+    width: auto;
+    height: 8vh;
+    padding-left: 3vw;
+}
+
+.itensMenu{
+    display: flex;
+    padding-right: 3vw;
+}
+.item{
+    cursor: pointer;
+    margin: 0 15px;
+    height: 30px;
+    width: 7vw;
+    min-width: 80px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.item:hover{
+    background-color: var(--color-bg-hover);
+}
+.item:hover a{
+    color: var(--color-font-secondary);
+    background-color: var(--color-bg-hover);
+}
+
+#btnInicio{
+    cursor: default;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border-secondary);
+}
+#btnInicio:hover a{
+    cursor: default;
+    color: var(--color-font-dark);
+    background: var(--color-bg-primary);
+}
+.item a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-font-dark);
+    display: flexbox;
+    text-decoration: none;
+    list-style: none;
+}
+
+.conteudo{
+    margin-top: 0;
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.tituloInicio{
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+    color: var(--color-font-dark);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.boxBotoes{
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-space-between{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    max-width: 280px;
+    min-width: 220px;
+}
+
+.btn{
+    cursor: pointer;
+    min-width: 100px;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    max-width: 300px;
+    min-height: 30px;
+    max-height: 40px;
+}
+
+.btn-light{
+    color: var(--color-font-secondary);
+    border: 1.5px solid var(--color-border-primary);
+    background-color: var(--color-bg-primary);
+}
+
+.btn-dark{
+    border-width: 0;
+    color: var(--color-font-light);
+    background-color: var(--color-bg-secondary);
+}
