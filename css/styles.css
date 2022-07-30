@@ -137,3 +137,46 @@ html{
     color: var(--color-font-light);
     background-color: var(--color-bg-secondary);
 }
+
+.boxConteudoInicio{
+    display: flex;
+    padding-left: 5vw;
+    margin-top: 5vh;
+    height: 40vh;
+}
+.logoEmpresa{
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 40vw;
+    padding: 5vh;
+}
+
+.slideTopcs{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 3vw;
+    margin-left: 3vh;
+    width: 40vw;
+    height: 100%;
+    border-left: 5px solid var(--color-border-secondary);
+}
+
+.slideTopcs h3{
+    color: var(--color-font-primary);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.slideTopcs p{
+    color: var(--color-font-dark);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: 0.05em;
+}
