@@ -7,10 +7,10 @@
 
 html{
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
-:root{
+.light{
+    --logo-fill: #22355E;
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #217C97;
     --color-bg-hover: #d8d8d8;
@@ -21,18 +21,44 @@ html{
     --color-border-primary: #15262E;
     --color-border-secondary: #2C6693;
     --color-circle-primary: #F3D2F2;
+    --color-mode: #2C6693;
+}
+
+.dark{
+    --logo-fill: #FFFFFF;
+    --color-bg-primary: #242A38;
+    --color-bg-secondary: #217C97;
+    --color-bg-hover: #d8d8d8;
+    --color-font-primary: #F75F63;
+    --color-font-secondary: #fff;
+    --color-font-dark: #fff;
+    --color-font-light: #ffffff;
+    --color-border-primary: #fff;
+    --color-border-secondary: #fff;
+    --color-circle-primary: #F3D2F2;
+    --color-mode: #fff;
+}
+
+body{
+    background-color: var(--color-bg-primary);
+    transition: 0.6s ease-in-out;
+}
+
+.conteudo{
+    height: 100vh;
 }
 
 .header{
-    display: flex;
+    z-index: 5;
     position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-bg-primary);
-    padding: 0 2.5vw;
+    display: flex;
     width: 100%;
     height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5vw;
     min-height: 40px;
+    background-color: var(--color-bg-primary);
 }
 
 .logoImg{
@@ -43,13 +69,51 @@ html{
     min-height: 40px;
 }
 
+.logoSvg{
+    fill: var(--logo-fill);
+    transition: 0.6s ease-in-out;
+}
+
+.botãoMode{
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    transition: 1s ease-in-out;
+}
+
+#modeD{
+    color: var(--color-mode);
+    height: 30px;
+    width: 30px;
+    line-height : 30px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+#modeC{
+    color: var(--color-mode);
+    height: 30px;
+    width: 30px;
+    line-height : 30px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+
 .itensMenu{
     display: flex;
     padding-right: 3vw;
 }
+
 .item{
     cursor: pointer;
-    margin: 0 15px;
+    margin: 0 1vw;
     height: 30px;
     width: 7vw;
     min-width: 80px;
@@ -57,7 +121,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-font-light);
+    border: 1px solid #ffffff00;
 }
 
 .item:hover{
@@ -81,7 +145,6 @@ html{
 .conteudo{
     margin-top: 0;
     padding-top: 10vh;
-    height: 100vh;
 }
 
 .tituloInicio{
@@ -148,16 +211,20 @@ html{
     padding: 5vh;
 }
 
+.barraVertical{
+    height: 100%;
+    width: 10px;
+}
+
+
 .slideTopcs{
     display: flexbox;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 3vw;
-    margin-left: 3vh;
+    margin-left: 2vh;
     width: 40vw;
     height: 100%;
-    border-left: 5px solid var(--color-border-secondary);
 }
 
 .slideTopcs h3{
@@ -176,126 +243,104 @@ html{
     text-align: justify;
     letter-spacing: 0.05em;
 }
+@keyframes float{
+    
+    30%{
+        opacity: 1;
+    }
 
-.conteudo-sobre{
-    padding-top: 3em;
-    padding-left: 4em;
-    display: grid;
-
-    grid-template-areas: 
-    "text1 img"
-    "text2 img";
-
+    60%{
+        opacity: 0;
+    }
 }
 
-.conteudo-textos{
-    padding-top: 2em;
+.slideItem{
+    position: absolute;
+    width: 35vw;
+    opacity: 0;
+    animation: float 15s ease-in-out infinite;
+}
+
+.slideItem:nth-child(2){
+    animation-delay: 5s;
+}
+.slideItem:nth-child(3){
+    animation-delay: 10s;
+}
+
+.conteudo-sobre{
     display: flex;
-    flex-direction: column;
+    margin-top: 2vh;
+    padding-left: 4vw;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
 }
 
 .text-sobre{
     font-family: 'Roboto';
+    width: 60vw;
+    margin-bottom: 5vh;
 }
 
 .text-sobre p{
-    margin-left: 2em;
+    margin-left: 3vw;
     font-size: 2vw;
+    color: var(--color-font-dark);
+    text-align: justify;
+    font-size: 1.3em;
+    padding-bottom: 2vh;
 }
 
 .text-sobre h1{
-    padding-bottom: 2%;
-    font-size: 40px;
+    padding-bottom: 2vh;
+    font-size: 2.2rem;
     color: var(--color-font-primary);
 }
 
-.text1{
-    width: 60vw;
-    grid-area: text1;
-    height: 30vh;
+.linhaHoriz{
+    width: 90%;
+    align-items: center;
+    margin-bottom: 4vh;
 }
 
-.text1 p{
-    text-align: justify;
-    border-bottom: 2px dashed var(--color-border-secondary);
-    border-width: 6px;
-    padding-bottom: 2em;
+.lineSvg{
+    stroke: var(--logo-fill);
+    stroke-width: 1.5vh;
 }
-
-.text2{
-    padding-top: 2em;
-    width: 60vw;
-    grid-area: text2;
-    height: 30vh;
-}
-
-.text2 p{
-    text-align: justify;
-}
-
 .img-sobre img{
     grid-area: img;
-    width: 30vw;
-    height: 70vh;
+    width: 20vw;
+    height: 50vh;
 }
 
 .docs-content{
-    width: 100vw;
-    height: 100vh;
-
-    padding-left: 2.5vw;
-    margin-top: 3em;
     display: grid;
-    grid-template-areas: 
-    "item1 item2 item3 item4"
-    "item5 item6 item7 item8";
+    grid-template-columns: repeat(auto-fit, minmax(160px, 250px));
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .doc-item{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: block;
+    cursor: pointer;
     border: 2px solid var(--color-border-secondary);
     border-radius: 15px;
-    width: 20vw;
-    height: 25vh;
+    width: 150px;
+    height: 150px;
+    margin: 2vh 2vw;
+    align-items: center;
+    text-align: center;
 }
 
-.item1{
-    grid-area: item1;
-}
-
-.item2{
-    grid-area: item2;
-}
-
-.item3{
-    grid-area: item3;
-}
-
-.item4{
-    grid-area: item4;
-}
-
-.item5{
-    grid-area: item5;
-}
-
-.item6{
-    grid-area: item6;
-}
-
-.item7{
-    grid-area: item7;
-}
-
-.item8{
-    grid-area: item8;
-}
 
 .doc-item img{
     width: 15vw;
-    height: 15vh;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
 }
 
 .doc-item span{
@@ -303,5 +348,5 @@ html{
     font-family: 'Roboto';
     color: var(--color-border-secondary);
     font-weight: 700;
-    font-size: 2vw;
+    font-size: 1rem;
 }
