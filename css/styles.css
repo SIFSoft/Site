@@ -104,8 +104,6 @@ body{
     user-select: none;
 }
 
-
-
 .itensMenu{
     display: flex;
     padding-right: 3vw;
@@ -199,9 +197,11 @@ body{
 
 .boxConteudoInicio{
     display: flex;
-    padding-left: 5vw;
     margin-top: 5vh;
     height: 40vh;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
 }
 .logoEmpresa{
     justify-content: center;
@@ -216,17 +216,24 @@ body{
     width: 10px;
 }
 
-
-.slideTopcs{
-    display: flexbox;
+.slide{
+    margin: 0 auto;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 2vh;
     width: 40vw;
-    height: 100%;
+    height: 30vh;
+    min-height: 270px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 }
-
+.slideTopcs{
+    width: 40vw;
+    height: 35vh;
+    display: flex;
+}
+.slideTopcs input{
+    display: none;
+}
 .slideTopcs h3{
     color: var(--color-font-primary);
     padding-top: 2vh;
@@ -243,31 +250,76 @@ body{
     text-align: justify;
     letter-spacing: 0.05em;
 }
-@keyframes float{
-    
-    30%{
-        opacity: 1;
-    }
-
-    60%{
-        opacity: 0;
-    }
-}
 
 .slideItem{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    transition: 1s;
+}
+
+.conteudoSlide{
+    width: 36vw;
+    height: 30vh;
+    align-items: center;
+    text-align: center;
+    margin: 2vh 2vw;
+}
+
+.nav-manual{
     position: absolute;
-    width: 35vw;
-    opacity: 0;
-    animation: float 15s ease-in-out infinite;
+    width: 40vw;
+    margin-top: 35vh;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid var(--color-mode);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 1s;
+}
+.manual-btn:hover{
+    background-color: var(--color-bg-hover);
 }
 
-.slideItem:nth-child(2){
-    animation-delay: 5s;
+#radio1:checked ~ .first{
+    margin-left: 0;
 }
-.slideItem:nth-child(3){
-    animation-delay: 10s;
+#radio2:checked ~ .first{
+    margin-left: -40vw;
+}
+#radio3:checked ~ .first{
+    margin-left: -80vw;
 }
 
+.nav-auto div{
+    border: 2px solid var(--color-border-primary);
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 1s;
+}
+#radio1:checked ~ .nav-auto .btn-auto1{
+    background-color: var(--color-font-primary);
+}
+#radio2:checked ~ .nav-auto .btn-auto2{
+    background-color: var(--color-font-primary);
+}
+#radio3:checked ~ .nav-auto .btn-auto3{
+    background-color: var(--color-font-primary);
+}
+.nav-auto{
+    position: absolute;
+    width: 40vw;
+    margin-top: 35vh;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
 .conteudo-sobre{
     display: flex;
     margin-top: 2vh;
@@ -312,41 +364,4 @@ body{
     grid-area: img;
     width: 20vw;
     height: 50vh;
-}
-
-.docs-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 250px));
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.doc-item{
-    display: block;
-    cursor: pointer;
-    border: 2px solid var(--color-border-secondary);
-    border-radius: 15px;
-    width: 150px;
-    height: 150px;
-    margin: 2vh 2vw;
-    align-items: center;
-    text-align: center;
-}
-
-
-.doc-item img{
-    width: 15vw;
-    height: auto;
-    max-width: 80px;
-    max-height: 80px;
-}
-
-.doc-item span{
-    padding-top: 2%;
-    font-family: 'Roboto';
-    color: var(--color-border-secondary);
-    font-weight: 700;
-    font-size: 1rem;
 }
