@@ -374,8 +374,81 @@ body{
     stroke: var(--logo-fill);
     stroke-width: 1.5vh;
 }
+
 .img-sobre img{
     grid-area: img;
     width: 20vw;
     height: 50vh;
+}
+
+.form-content{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.form{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form label{
+    margin-top: 3em;
+    font-family: Roboto;
+    color: var(--color-font-dark);
+}
+
+.form input{
+    width: 60%;
+    height: 1em;
+    padding: 10px;
+    border: 2px solid var(--color-font-dark);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.form textarea{
+    height: 25%;
+    width: 60%;
+    padding: 10px;
+    border: 2px solid var(--color-font-dark);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.form button{
+    margin-top: 2em;
+    width: 10%;
+    padding: 10px;
+    background: var(--color-bg-primary);
+    color: var(--color-font-dark);
+
+    border: 2px solid var(--color-font-dark);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.form button:hover{
+    background: var(--color-bg-hover);
+}
+
+.agradecimento{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
 }
