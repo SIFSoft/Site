@@ -452,3 +452,8 @@ body{
     justify-content: center;
     font-family: Roboto;
 }
+
+.document-container{
+    padding-left: 2em;
+    padding-top: 5em;
+}
