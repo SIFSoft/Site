@@ -458,10 +458,11 @@ body{
 }
 
 .docsTitle{
-    padding-top: 2em;
+    padding-top: 15vh;
     width: 100vw;
     text-align: center;
     font-family: Roboto;
+    color: var(--color-font-dark)
 }
 
 .document-container{
@@ -476,18 +477,22 @@ table{
 }
 
 table, th, td {
-    border: 2px solid black;
+    border: 2px solid #15262E;
     border-collapse: collapse;
     font-size: 1em;
     font-family: Roboto;
+    color: #15262E;
 }
 
 th{
-    background-color: #1D66AD;
+    font-weight: 900;
+    background-color: #2C6693;
+    color: #FFFFFF;
 }
 
 td{
-    background-color: #217C97;
+    font-weight: 400;
+    background-color: var(--color-bg-hover);
 }
 
 th, td {
