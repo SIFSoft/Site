@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .light{
@@ -22,6 +23,7 @@ html{
     --color-border-secondary: #2C6693;
     --color-circle-primary: #F3D2F2;
     --color-mode: #2C6693;
+
 }
 
 .dark{
@@ -396,12 +398,12 @@ body{
 }
 
 .form label{
-    margin-top: 3em;
     font-family: Roboto;
     color: var(--color-font-dark);
 }
 
 .form input{
+    margin-bottom: 3em;
     width: 60%;
     height: 1em;
     padding: 10px;
@@ -411,6 +413,7 @@ body{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    background: var(--color-bg-hover);
 }
 
 .form textarea{
@@ -423,6 +426,7 @@ body{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    background: var(--color-bg-hover);
 }
 
 .form button{
@@ -453,7 +457,50 @@ body{
     font-family: Roboto;
 }
 
+.docsTitle{
+    padding-top: 2em;
+    width: 100vw;
+    text-align: center;
+    font-family: Roboto;
+}
+
 .document-container{
     padding-left: 2em;
     padding-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 80vw;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: 1em;
+    font-family: Roboto;
+}
+
+th{
+    background-color: #1D66AD;
+}
+
+td{
+    background-color: #217C97;
+}
+
+th, td {
+    padding: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.contTitle{
+    padding-top: 2em;
+    width: 100vw;
+    text-align: center;
+    font-family: Roboto;
 }
