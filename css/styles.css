@@ -7,7 +7,6 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 .light{
@@ -43,7 +42,6 @@ html{
 
 body{
     background-color: var(--color-bg-primary);
-    transition: 0.6s ease-in-out;
 }
 
 .conteudo{
@@ -73,7 +71,6 @@ body{
 
 .logoSvg{
     fill: var(--logo-fill);
-    transition: 0.6s ease-in-out;
 }
 
 .botãoMode{
@@ -159,7 +156,11 @@ body{
 .conteudo{
     margin-top: 0;
     padding-top: 10vh;
+    background-image: url("img/background.svg");
+    background-size: auto;
+    background-position: 0;
 }
+
 
 .tituloInicio{
     margin-top: 10vh;
@@ -241,6 +242,7 @@ body{
     overflow: hidden;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    background-color: var(--color-bg-primary);
 }
 .slideTopcs{
     width: 40vw;
@@ -502,10 +504,14 @@ th, td {
 .center {
     text-align: center;
 }
-
+.textoForm{
+    font-weight: 400;
+    margin-bottom: 1vh;
+}
 .contTitle{
     padding-top: 2em;
     width: 100vw;
     text-align: center;
     font-family: Roboto;
+    color: var(--color-font-dark)
 }
