@@ -156,11 +156,7 @@ body{
 .conteudo{
     margin-top: 0;
     padding-top: 10vh;
-    background-image: url("img/background.svg");
-    background-size: auto;
-    background-position: 0;
 }
-
 
 .tituloInicio{
     margin-top: 10vh;
@@ -475,6 +471,7 @@ body{
 }
 
 table{
+    
     width: 80vw;
 }
 

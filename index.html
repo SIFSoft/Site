@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>SIFSoft - Empresa Júnior</title>
+
     <link rel="icon" type="imagem/png" href="imgs/icon.png" />
+
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link href="css/formsContato.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet"
-        href="https:/fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,1,-25" />
-    <link rel="stylesheet"
-        href="https:/fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,1,-25" />
+    <link rel="stylesheet" href="https:/fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,1,-25" />
+    <link rel="stylesheet" href="https:/fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,1,-25" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
     <script src="js/scroll.js" defer></script>
-    <script src="js/theme.js"></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/forms.js"></script>
 </head>
 
 <body id="conteiner" class="light">
+
+    
     <Header class="header" id="navbar">
         <div class="logo">
-            <a href="#inicio">
+            <a href="#sucess">
                 <svg class="logoImg" width="2032" height="1076" viewBox="0 0 2032 1076" fill="none"
                     xmlns="http:/www.w3.org/2000/svg">
                     <g id="logo">
@@ -43,7 +47,8 @@
             </ul>
         </div>
     </Header>
-    <a class="boxButtomForm" id="idBoxForm" href="#formsModal">
+    <!-- Formulário de contatos e botão para acessar o modal. -->
+    <a class="boxButtomForm" id="idBoxForm" onclick="escondeButton()" href="#formsModal">
         <button class="formContatobtn">
             <div class="itensBtnContat">
                 <p id="envelopIcon"><i class="bi bi-envelope-fill"></i></p>
@@ -52,11 +57,11 @@
         </button>
     </a>
     <div class="forms" id="formsModal">
-        <a href="#fechar" title="Fechar" class="fechar"><i class="bi bi-x-lg"></i></a>
+        <a href="#fechar" title="Fechar" onclick="visivelButton()" class="fechar"><i class="bi bi-x-lg"></i></a>
         <h1 class="titulo-form">Entre em contato!</h1>
         <form class="formulario" action="https://formsubmit.co/gdsd@aluno.ifnmg.edu.br" method="POST">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#fechar">
             <div class="entradas">
                 <label for="name" class="textoForm">Nome</label>
                 <input type="text" name="name" id="name" required>
@@ -70,20 +75,23 @@
                 <textarea name="message" id="message"></textarea>
             </div>
             <div class="botoes-forms">
-                <a href="#fechar" class="btn-from btn-from-cancel">Cancelar</a>
+                <a href="#fechar" onclick="visivelButton()" class="btn-from btn-from-cancel">Cancelar</a>
                 <button type="submit" class="btn-from btn-from-envio">Enviar</button>
             </div>
         </form>
     </div>
+    <div class="sucessEnvio" id="sucess" onload="enviadoSucesso()">
+        <h1>Enviado com sucesso!</h1>
+    </div>
+    <!---------------------------------------------------------->
     <Main>
-        
         <section class="conteudo" id="inicio">
             <div>
                 <h1 class="tituloInicio">Precisa de ajuda em sistemas de informação?</h1>
                 <div class="boxBotoes">
                     <div class="btn-space-between">
-                        <button class="btn btn-dark" id="btnContatoInicio">Contacte-nos</button>
-                        <button class="btn btn-light">Saiba mais!</button>
+                        <button class="btn btn-dark"  id="btnContatoInicio">Contacte-nos</button>
+                        <button class="btn btn-light" href="#inicio">Saiba mais!</button>
                     </div>
                 </div>
                 <div class="boxConteudoInicio">
@@ -150,8 +158,8 @@
                     </div>
                 </div>
             </div>
-        </section>
         
+        </section>
         <section class="conteudo" id="sobre">
             <div class="conteudo-sobre">
                 <div class="conteudo-textos">
@@ -182,9 +190,11 @@
             
         </section>
     </Main>
+
     <footer>
 
     </footer>
+
     <script src="js/slide.js"></script>
 </body>
 

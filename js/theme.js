@@ -1,5 +1,6 @@
 const NOME_ARQUIVO = "theme.json";
 
+// Variável para guardar o valor do tema atual selecionado.
 let tema = {
     modo: 0,
 };
@@ -16,6 +17,7 @@ let objSalvo = localStorage.getItem(NOME_ARQUIVO);
 return JSON.parse(objSalvo);
 }
 
+// Função para mudar o tema conforme o valor do checkbox ao ser clicado.
 function theme(valor) {
     if (valor == 0) {
       document.getElementById("btnMode").value = 1;
@@ -33,6 +35,7 @@ function theme(valor) {
     salvaModo(tema)
 }
 
+// Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
 window.onload = function () {
     document.body.style.animation = 'none'
     tema = lerArquivoRanque();
