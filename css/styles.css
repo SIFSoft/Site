@@ -44,8 +44,11 @@ body{
     background-color: var(--color-bg-primary);
 }
 
-.conteudo{
-    margin-bottom: 10vh;
+Main{
+    background-image: url(/imgs/bg.svg);
+    background-position-y: -15vh;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 .header{
@@ -309,6 +312,7 @@ body{
     margin-left: -80vw;
 }
 
+
 .nav-auto div{
     border: 2px solid var(--color-border-primary);
     padding: 5px;
@@ -381,123 +385,6 @@ body{
     height: 50vh;
 }
 
-.form-content{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-}
-
-.form{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.form label{
-    font-family: Roboto;
-    color: var(--color-font-dark);
-}
-
-.form input{
-    margin-bottom: 3em;
-    width: 60%;
-    height: 1em;
-    padding: 10px;
-    border: 2px solid var(--color-font-dark);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    background: var(--color-bg-hover);
-}
-
-.form textarea{
-    height: 25%;
-    width: 60%;
-    padding: 10px;
-    border: 2px solid var(--color-font-dark);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    background: var(--color-bg-hover);
-}
-
-.form button{
-    margin-top: 2em;
-    width: 10%;
-    padding: 10px;
-    background: var(--color-bg-primary);
-    color: var(--color-font-dark);
-
-    border: 2px solid var(--color-font-dark);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-.form button:hover{
-    background: var(--color-bg-hover);
-}
-
-.agradecimento{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    font-family: Roboto;
-}
-
-.docsTitle{
-    padding-top: 15vh;
-    width: 100vw;
-    text-align: center;
-    font-family: Roboto;
-    color: var(--color-font-dark)
-}
-
-.document-container{
-    padding-left: 2em;
-    padding-top: 5em;
-    display: flex;
-    justify-content: center;
-}
-
-table{
-    
-    width: 80vw;
-}
-
-table, th, td {
-    border: 2px solid #15262E;
-    border-collapse: collapse;
-    font-size: 1em;
-    font-family: Roboto;
-    color: #15262E;
-}
-
-th{
-    font-weight: 900;
-    background-color: #2C6693;
-    color: #FFFFFF;
-}
-
-td{
-    font-weight: 400;
-    background-color: var(--color-bg-hover);
-}
-
-th, td {
-    padding: 1em;
-}
-
 .center {
     text-align: center;
 }
@@ -511,4 +398,25 @@ th, td {
     text-align: center;
     font-family: Roboto;
     color: var(--color-font-dark)
+}
+
+#equipe{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tituloEquipe{
+    margin-top: 5vh;
+    color: var(--color-font-dark);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.cardsDiretores{
+    height: 70vh;
+}
+
+.footer{
+    height: 15vh;
+    background-color: #22355E;
 }

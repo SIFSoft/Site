@@ -54,7 +54,7 @@
     width: 300px;
     height: 400px;
     bottom: 4.5vh;
-    right: 0.5vw;
+    right: 1vw;
 }
 .titulo-form{
     margin-top: 2vh;
@@ -185,3 +185,4 @@
     line-height: 1.5;
     justify-content: center;
 }
+
