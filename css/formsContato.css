@@ -55,6 +55,7 @@
     height: 400px;
     bottom: 4.5vh;
     right: 1vw;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.212);
 }
 .titulo-form{
     margin-top: 2vh;
