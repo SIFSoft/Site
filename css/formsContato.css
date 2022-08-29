@@ -103,6 +103,7 @@
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+
 .botoes-forms{
     display: flex;
     margin-top: 3vh;
@@ -111,6 +112,7 @@
     margin-left: 5px;
     justify-content: space-between;
 }
+
 .btn-from{
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;

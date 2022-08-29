@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 
+main{
+    min-height: 100vh;
+}
+
 .docsTitle{
     padding-top: 15vh;
     width: 100vw;
@@ -41,4 +45,12 @@ td{
 
 th, td {
     padding: 1em;
+}
+
+.botaoView{
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    background-color: var(--color-bg-hover);
 }

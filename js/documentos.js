@@ -8,7 +8,7 @@ async function getAllDocuments(){
     const response = await fetch(url)
 
     const data = await response.json();
-
+    data.reverse()
     data.map((documento) =>{
         
         let tr = tbody.insertRow();
@@ -19,7 +19,7 @@ async function getAllDocuments(){
         let td_link = tr.insertCell();
 
         td_nome.innerText = documento.title;
-        td_data.innerText = documento.date;
+        td_data.innerText = documento.date.split('-').reverse().join('/');;
         td_tipo.innerText = documento.type;
         
         td_nome.classList.add('center');
@@ -27,14 +27,14 @@ async function getAllDocuments(){
         td_tipo.classList.add('center');
         td_link.classList.add('center');
 
-
-        let criarAncora = document.createElement("a");
-        criarAncora.setAttribute("href", `${documento.link}`)
-        criarAncora.setAttribute("target", "_blank")
-
+        
+        let criarAncora = document.createElement("button");
+        criarAncora.setAttribute("value", `${documento.link}`);
+        criarAncora.setAttribute("type", "button");
+        criarAncora.setAttribute("class", "botaoView");
+        criarAncora.setAttribute('onClick',"openModaldocumets(this.value, '" + documento.title +"');");
         let addVisualizar = document.createElement('img');
         addVisualizar.src = 'imgs/eye.svg';
-        addVisualizar.setAttribute("a", `${documento.link}`);
 
         criarAncora.appendChild(addVisualizar);
         td_link.appendChild(criarAncora);
@@ -42,3 +42,16 @@ async function getAllDocuments(){
 }
 
 getAllDocuments();
+
+
+function openModaldocumets(link, title){
+    document.getElementById("modal-pdf-id").style.visibility = 'visible'
+    document.getElementById("modal-pdf-id").style.opacity = '1'
+    document.getElementById("pdf-view-id").src = `${link}`;
+    document.getElementById("tituloDocsPdf").textContent = title;
+}
+function closeModaldocumets(){
+    document.getElementById("modal-pdf-id").style.opacity = '0'
+    document.getElementById("modal-pdf-id").style.visibility = 'hidden'
+    document.getElementById("pdf-view-id").src = ""
+}
