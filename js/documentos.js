@@ -2,7 +2,7 @@ const url = 'https://sifsoft-api.herokuapp.com/documents/?format=json'
 
 const carregando = document.querySelector('.carregando');
 const documentsContainer = document.querySelector('.document-container')
-tbody = document.querySelector('.tbody')
+let tbody = document.querySelector('.tbody')
 
 async function getAllDocuments(){
     const response = await fetch(url)

@@ -1,9 +1,7 @@
 // Função para mostrar que o botão de início está selecionado ao abrir a pagina.
-window.onload = function(){
-  if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
-    document.getElementById("btnInicio").className = "itemDesabilitado";
-    document.getElementById("linkInicio").style.cursor = "default";
-  }
+if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
+  document.getElementById("btnInicio").className = "itemDesabilitado";
+  document.getElementById("linkInicio").style.cursor = "default";
 }
 
 // Chama a função ``scrollShandow()`` conforme se scrolla a página.
