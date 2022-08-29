@@ -19,6 +19,11 @@
     transform: translateX(-7.5vw);
 }
 
+#btnContatoInicio :hover ~ .boxButtomForm{
+    transition: linear 300ms;
+    transform: translateX(-7.5vw);
+}
+
 .itensBtnContat{
     display: flex;
     pointer-events: none; 
