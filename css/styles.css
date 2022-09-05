@@ -22,7 +22,7 @@ html{
     --color-border-secondary: #2C6693;
     --color-circle-primary: #F3D2F2;
     --color-mode: #2C6693;
-
+    --color-bg-footer: #22355E;
 }
 
 .dark{
@@ -480,5 +480,29 @@ Main{
 .footer{
     height: 20vh;
     width: 100%;
-    background-color: #22355E;
+    background-color: var(--color-bg-footer);
+    display: flex;
+    align-items: center;
+    color: var(--color-font-light);
+    font-family: Roboto;
+    justify-content: space-between;
+    border-top: 2px solid #22355E;
+}
+
+.endereco{
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.endereco h2{
+    padding-bottom: 1em;
+}
+
+.footer-sociais{
+    padding-right: 2em;
+}
+
+.footer-sociais img{
+    width: 2em;
+    margin-right: 1em;
 }
