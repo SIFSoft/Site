@@ -426,11 +426,14 @@ Main{
 }
 
 .card{
+
     display: flex;
     flex-direction: column;
     padding-top: 3px;
     padding-bottom: 3px;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     width: 20vw;
     height: 35vh;
@@ -486,6 +489,7 @@ Main{
 .footer{
     height: 20vh;
     width: 100%;
+    min-height: 150px;
     background-color: var(--color-bg-footer);
     display: flex;
     align-items: center;

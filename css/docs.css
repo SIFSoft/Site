@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 
 main{
-    min-height: 79.7vh;
+    min-height: 73.7vh;
+    padding-bottom: 4vh;
     width: 100%;
 }
 
 .docsTitle{
     padding-top: 15vh;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     font-family: Roboto;
     color: var(--color-font-dark)

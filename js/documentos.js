@@ -18,8 +18,8 @@ async function getAllDocuments(){
         let td_tipo = tr.insertCell();
         let td_link = tr.insertCell();
 
-        td_nome.innerText = documento.title;
-        td_data.innerText = documento.date.split('-').reverse().join('/');;
+        td_nome.innerText = documento.titulo;
+        td_data.innerText = documento.data.split('-').reverse().join('/');;
         td_tipo.innerText = documento.type;
         
         td_nome.classList.add('center');
@@ -32,7 +32,7 @@ async function getAllDocuments(){
         criarAncora.setAttribute("value", `${documento.link}`);
         criarAncora.setAttribute("type", "button");
         criarAncora.setAttribute("class", "botaoView");
-        criarAncora.setAttribute('onClick',"openModaldocumets(this.value, '" + documento.title +"');");
+        criarAncora.setAttribute('onClick',"openModaldocumets(this.value, '" + documento.titulo +"');");
         let addVisualizar = document.createElement('img');
         addVisualizar.src = 'imgs/eye.svg';
 
