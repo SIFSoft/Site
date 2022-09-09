@@ -8,6 +8,7 @@ async function getAllDocuments(){
     const response = await fetch(url)
 
     const data = await response.json();
+    data.sort(function(a, b) { return parseInt(a.data) - parseInt(b.data) })
     data.reverse()
     data.map((documento) =>{
         
@@ -33,8 +34,8 @@ async function getAllDocuments(){
         criarAncora.setAttribute("type", "button");
         criarAncora.setAttribute("class", "botaoView");
         criarAncora.setAttribute('onClick',"openModaldocumets(this.value, '" + documento.titulo +"');");
-        let addVisualizar = document.createElement('img');
-        addVisualizar.src = 'imgs/eye.svg';
+        let addVisualizar = document.createElement('i');
+        addVisualizar.classList= 'bi bi-eye-fill';
 
         criarAncora.appendChild(addVisualizar);
         td_link.appendChild(criarAncora);

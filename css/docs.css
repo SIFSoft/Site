@@ -1,10 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 
 main{
-    min-height: 73.7vh;
+    min-height: 76vh;
     padding-bottom: 4vh;
     width: 100%;
 }
+
+
+.light{
+    --color-font-index: #fff;
+    --color-bg-table: #63a3b6;
+    --color-bg-table-primary: #fff;
+    --color-bg-table-secondary: #f2f2f2;
+}
+
+.dark{
+    --color-font-index: #242a38;
+    --color-bg-table: #62b269;
+    --color-bg-table-primary: #4e596f;
+    --color-bg-table-secondary: #6c757d;
+}
+
 
 .docsTitle{
     padding-top: 15vh;
@@ -15,44 +31,51 @@ main{
 }
 
 .document-container{
-    padding-left: 2em;
-    padding-top: 5em;
+    padding-top: 5vh;
     display: flex;
     justify-content: center;
 }
 
 table{
-    
+    border-collapse: collapse;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #15262e85;
+    background-color: var(--color-bg-table-primary);
+    overflow: hidden;
     width: 80vw;
 }
-
-table, th, td {
-    border: 2px solid #15262E;
-    border-collapse: collapse;
-    font-size: 1em;
-    font-family: Roboto;
-    color: #15262E;
+thead{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    box-shadow: 0 2px 10px #15262e4d;
+    margin-bottom: 5vh;
+    color:var(--color-font-index);
+    background-color: var(--color-bg-table);
 }
 
 th{
-    font-weight: 900;
-    background-color: #2C6693;
-    color: #FFFFFF;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 td{
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    background-color: var(--color-bg-hover);
+    color: var(--color-font-secondary);
+    padding: 1rem 2rem;
 }
 
-th, td {
-    padding: 1em;
+tr:nth-child(even){
+    background-color: var(--color-bg-table-secondary);
 }
 
 .botaoView{
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    color: var(--color-font-secondary);
+    background-color: rgba(255, 255, 255, 0);
     width: 50%;
-    height: 50%;
-    background-color: var(--color-bg-hover);
+    font-size: 1.1rem;
 }
