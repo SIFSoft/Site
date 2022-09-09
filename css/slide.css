@@ -1,0 +1,112 @@
+.slide{
+    margin: 0 auto;
+    justify-content: center;
+    width: 40vw;
+    height: 32vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    min-height: 270px;
+    overflow: hidden;
+}
+.slideTopcs{
+    display: flex;
+    width: 50vw;
+    height: 40vh;
+    padding-top: 1vh;
+}
+.slideTopcs input{
+    display: none;
+}
+.slideTopcs h3{
+    color: var(--color-font-primary);
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.slideTopcs p{
+    color: var(--color-font-dark);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: 0.05em;
+}
+
+.slideItem{
+    width: 40vw;
+    height: 35vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background-image: url(/imgs/bg-slide.svg);
+    background-size: 100% auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: var(--color-bg-primary);
+    transition: 1s;
+}
+
+.conteudoSlide{
+    width: 36vw;
+    height: 30vh;
+    align-items: center;
+    text-align: center;
+    margin: 2vh 2vw;
+}
+
+.nav-manual{
+    position: absolute;
+    width: 40vw;
+    margin-top: 36vh;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid var(--color-mode);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 1s;
+}
+.manual-btn:hover{
+    background-color: var(--color-bg-hover);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0vw;
+}
+#radio2:checked ~ .first{
+    margin-left: -44vw;
+}
+#radio3:checked ~ .first{
+    margin-left: -88vw;
+}
+
+
+.nav-auto div{
+    border: 2px solid var(--color-border-primary);
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 1s;
+}
+#radio1:checked ~ .nav-auto .btn-auto1{
+    background-color: var(--color-font-primary);
+}
+#radio2:checked ~ .nav-auto .btn-auto2{
+    background-color: var(--color-font-primary);
+}
+#radio3:checked ~ .nav-auto .btn-auto3{
+    background-color: var(--color-font-primary);
+}
+.nav-auto{
+    position: absolute;
+    width: 40vw;
+    margin-top: 36vh;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
