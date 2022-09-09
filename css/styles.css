@@ -536,3 +536,63 @@ Main{
 .iconsFooter:hover{
     color: var(--color-font-primary);
 }
+
+
+.loading{
+    position: absolute;
+    display: flex;
+    margin-top: 15vh;
+}
+
+.bolas > div {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 5px;
+  animation-name: loadingAnim;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.bolas > div:nth-child(1) {
+    background-color: #83bfff;
+    animation-duration:0.90s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    background-color: #979ea3;
+    animation-duration: 0.90s;
+    animation-delay: 0.20s;
+}
+.bolas > div:nth-child(3) {
+    background-color:#a5dab1;
+    animation-duration: 0.90s  ;
+    animation-delay: 0.40s;
+}
+ 
+@keyframes loadingAnim {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.01);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}
+
+#loading-id-conselho, #loading-id-diretoria{
+    width: 100%;
+    margin-top: 2vh;
+    position: relative;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}

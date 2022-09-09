@@ -20,20 +20,28 @@ let icons = {
 
 // pega os dados da api, para inserir os cards.
 async function getAllMembros() {
-    const response = await fetch("https://sifsoft-api.herokuapp.com/auditCommittee/?format=json");
-    const data = await response.json();
 
-    data.map((documento) => {
+    const response1 = await fetch("https://sifsoft-api.herokuapp.com/directors/?format=json");
+    const dataDiretores = await response1.json();
+    document.getElementById("loading-id-diretoria").style.visibility = 'visibility'
+    dataDiretores.map((documento) => {
+        document.getElementById("loading-id-diretoria").style.visibility = 'hidden'
+        document.getElementById("loading-id-diretoria").style.position = 'absolute'
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.diretoria]}</span></div>`
+        document.getElementById("cards-cont").innerHTML += cardHtml
+    });
+
+    const response = await fetch("https://sifsoft-api.herokuapp.com/auditCommittee/?format=json");
+    const dataConselho = await response.json();
+    document.getElementById("loading-id-conselho").style.visibility = 'visibility'
+    dataConselho.map((documento) => {
+        document.getElementById("loading-id-conselho").style.visibility = 'hidden'
+        document.getElementById("loading-id-conselho").style.position = 'absolute'
         let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.cargo]}</span></div>`
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     
-    const response1 = await fetch("https://sifsoft-api.herokuapp.com/directors/?format=json");
-    const data1 = await response1.json();
-    data1.map((documento) => {
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.diretoria]}</span></div>`
-        document.getElementById("cards-cont").innerHTML += cardHtml
-    });
+    
 }
 
 getAllMembros();
