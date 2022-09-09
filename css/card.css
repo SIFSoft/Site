@@ -1,43 +1,59 @@
+.light{
+    --color-font-card-nome: #150303;
+    --color-font-card-cargo: #242a38;
+    --color-font-card-ano: #4e596f;
+    --color-icon-social: #111;
+    --color-bg-card: #fff;
+}
+
+.dark{
+    --color-font-card-nome: #fff;
+    --color-font-card-cargo: #217C97;
+    --color-font-card-ano: #4e596f;
+    --color-icon-social: #fff;
+    --color-bg-card: #2e343d;
+}
+
 .card{
     display: flex;
     flex-direction: column;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 2%;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     width: 20vw;
     height: 35vh;
-    min-width: 200px;
+    min-width: 220px;
     min-height: 230px;
-    background: #262C38;
-    border: 2px solid black;
+    background: var(--color-bg-card);
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .social-membro{
+    margin-top: -10%;
     width: 100%;
 }
 
 .social-membro a i{
-    width: 10%;
+    margin-top: 5%;
     font-size: 1.4em;
     float: right;
-    padding-right: 1em;
-    color: #fff;
+    padding-right: 1.1em;
+    font-weight: 900;
+    color: var(--color-icon-social);
 }
-
+.social-membro:hover a i{
+    color: var(--color-font-primary);
+}
 .foto-membro{
     width: auto;
-    height: 50%;
-    border: 5px solid var(--color-bg-secondary);
+    height: 40%;
+    margin-top: -5%;
     border-radius: 50%;
+    margin-bottom: 5%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -45,15 +61,28 @@
 }
 
 .card-text{
-    color: var(--color-font-light);
     font-family: Roboto;
-    font-weight: 700;
-    font-size: large;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+}
+
+.nome-membro{
+    color: var(--color-font-card-nome);
+    margin-top: 5%;
+    font-size: 1.1em;
+    font-weight: 900;
 }
 
 .cargo-membro{
+    color: var(--color-font-card-cargo);
     width: 100%;
-    border-top: 2px solid var(--color-bg-secondary);
+    margin-top: 2%;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.ano-membro{
+    color: var(--color-font-card-ano);
+    width: 100%;
+    margin-top: 5%;
+    font-size: 1em;
+    font-weight: 500;
 }

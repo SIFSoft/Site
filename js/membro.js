@@ -27,7 +27,7 @@ async function getAllMembros() {
     dataDiretores.map((documento) => {
         document.getElementById("loading-id-diretoria").style.visibility = 'hidden'
         document.getElementById("loading-id-diretoria").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.diretoria]}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.diretoria]}</span><span class='ano-membro'>${documento.ano}</span></div>`
         document.getElementById("cards-cont").innerHTML += cardHtml
     });
 
@@ -37,7 +37,7 @@ async function getAllMembros() {
     dataConselho.map((documento) => {
         document.getElementById("loading-id-conselho").style.visibility = 'hidden'
         document.getElementById("loading-id-conselho").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.cargo]}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.cargo]}</span><span class='card-text ano-membro'>${documento.ano}</span></div>`
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     
