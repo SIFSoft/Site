@@ -6,12 +6,13 @@ let tbody = document.querySelector('.tbody')
 
 async function getAllDocuments(){
     const response = await fetch(url)
-
+    document.getElementById("loading-id").style.visibility = 'visibility'
     const data = await response.json();
     data.sort(function(a, b) { return parseInt(a.data) - parseInt(b.data) })
+    console.log(data)
     data.reverse()
     data.map((documento) =>{
-        
+        document.getElementById("loading-id").style.visibility = 'hidden'
         let tr = tbody.insertRow();
 
         let td_nome = tr.insertCell();
