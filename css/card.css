@@ -45,7 +45,7 @@
     font-weight: 900;
     color: var(--color-icon-social);
 }
-.social-membro:hover a i{
+.social-membro a:hover i{
     color: var(--color-font-primary);
 }
 .foto-membro{

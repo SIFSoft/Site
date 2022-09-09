@@ -18,26 +18,40 @@ let icons = {
     'twitter': '<i class="bi bi-twitter"></i>'
 }
 
+function sortIndex(data, campo, ordem){
+    let ordemIndex = [];
+    for (const element of ordem){
+        for (let j = 0; j < data.length; j++){
+            if(data[j][campo] == element){
+                ordemIndex.push(j);
+            }
+        }
+    }
+    return ordemIndex;
+}
 // pega os dados da api, para inserir os cards.
 async function getAllMembros() {
 
     const response1 = await fetch("https://sifsoft-api.herokuapp.com/directors/?format=json");
     const dataDiretores = await response1.json();
+    let indexDiretores = sortIndex(dataDiretores, 'diretoria', Object.keys(cargo));
+
     document.getElementById("loading-id-diretoria").style.visibility = 'visibility'
-    dataDiretores.map((documento) => {
+    indexDiretores.map((i) => {
         document.getElementById("loading-id-diretoria").style.visibility = 'hidden'
         document.getElementById("loading-id-diretoria").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.diretoria]}</span><span class='ano-membro'>${documento.ano}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataDiretores[i].linkRedeSocial}'>${icons[dataDiretores[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataDiretores[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataDiretores[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataDiretores[i].diretoria]}</span><span class='ano-membro'>${dataDiretores[i].ano}</span></div>`
         document.getElementById("cards-cont").innerHTML += cardHtml
     });
 
     const response = await fetch("https://sifsoft-api.herokuapp.com/auditCommittee/?format=json");
     const dataConselho = await response.json();
     document.getElementById("loading-id-conselho").style.visibility = 'visibility'
-    dataConselho.map((documento) => {
+    let indexConselho = sortIndex(dataConselho, 'cargo', Object.keys(cargo));
+    indexConselho.map((i) => {
         document.getElementById("loading-id-conselho").style.visibility = 'hidden'
         document.getElementById("loading-id-conselho").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${documento.linkRedeSocial}'>${icons[documento.iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${documento.image_perfil}' alt=''><span class='card-text nome-membro'>${documento.nome}</span><span class='card-text cargo-membro'>${cargo[documento.cargo]}</span><span class='card-text ano-membro'>${documento.ano}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataConselho[i].linkRedeSocial}'>${icons[dataConselho[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataConselho[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataConselho[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataConselho[i].cargo]}</span><span class='card-text ano-membro'>${dataConselho[i].ano}</span></div>`
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     
