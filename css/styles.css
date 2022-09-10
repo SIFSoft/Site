@@ -31,7 +31,7 @@ html{
     --color-bg-secondary: #217C97;
     --color-bg-hover: #d8d8d8;
     --color-bg-footer: #2e343d;
-    --color-font-primary: #F75F63;
+    --color-font-primary: #2f92f0;
     --color-font-secondary: #fff;
     --color-font-dark: #fff;
     --color-font-light: #ffffff;
@@ -350,6 +350,7 @@ Main{
     font-weight: 500;
     cursor: pointer;
     display: flex;
+    transition: 1s;
 }
 .endereco-local:hover{
     color: var(--color-font-primary);
@@ -373,8 +374,10 @@ Main{
 .endereco-local div{
     display: flex;
     flex-direction: column;
+    margin-left: 1vw;
 }
 .iconsFooter{
+    transition: 1s;
     cursor: pointer;
     font-size: 2em;
     margin-right: 1em;

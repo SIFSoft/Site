@@ -11,7 +11,7 @@
 }
 .slideTopcs{
     display: flex;
-    width: 50vw;
+    width: 45vw;
     height: 40vh;
     overflow: hidden;
     scroll-behavior: auto;
@@ -38,7 +38,7 @@
 }
 
 .slideItem{
-    width: 49vw;
+    width: 42vw;
     height: 32vh;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -58,7 +58,7 @@
     font-size: 0.882em;
 }
 .conteudoSlide{
-    width: 36vw;
+    width: 38vw;
     height: auto;
     align-items: center;
     text-align: center;
@@ -70,6 +70,7 @@
     width: 40vw;
     margin-top: 36vh;
     display: flex;
+    padding-left: 5vw;
     justify-content: center;
 }
 .manual-btn{
@@ -88,10 +89,10 @@
     margin-left: 3vw;
 }
 #radio2:checked ~ .first{
-    margin-left: -41.5vw;
+    margin-left: -43.5vw;
 }
 #radio3:checked ~ .first{
-    margin-left: -98vw;
+    margin-left: -90vw;
 }
 
 
@@ -116,6 +117,7 @@
     position: absolute;
     width: 40vw;
     margin-top: 36vh;
+    padding-left: 5vw;
     display: flex;
     justify-content: center;
     margin-right: 10px;
