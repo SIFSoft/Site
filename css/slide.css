@@ -38,8 +38,8 @@
 }
 
 .slideItem{
-    width: 45vw;
-    height: 35vh;
+    width: 49vw;
+    height: 32vh;
     margin-left: 2vw;
     margin-right: 2vw;
     background-image: url(/imgs/bg-slide.svg);
@@ -54,9 +54,8 @@
     margin-top: -0.5vh;
 }
 
-
 #visaoID p{
-    font-size: 0.92em;
+    font-size: 0.882em;
 }
 .conteudoSlide{
     width: 36vw;
@@ -86,13 +85,13 @@
 }
 
 #radio1:checked ~ .first{
-    margin-left: 0vw;
+    margin-left: 3vw;
 }
 #radio2:checked ~ .first{
-    margin-left: -44vw;
+    margin-left: -41.5vw;
 }
 #radio3:checked ~ .first{
-    margin-left: -88vw;
+    margin-left: -98vw;
 }
 
 
