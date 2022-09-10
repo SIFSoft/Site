@@ -232,7 +232,9 @@ Main{
     height: 100%;
     width: 10px;
 }
-
+.lineVertic{
+    height: 100%;
+}
 .conteudo-sobre{
     display: flex;
     margin-top: 2vh;
@@ -268,6 +270,7 @@ Main{
     align-items: center;
     margin-bottom: 4vh;
 }
+
 
 .lineSvg{
     stroke: var(--logo-fill);

@@ -1,17 +1,20 @@
+
+@media(min-width: 750px) {
 .slide{
-    margin: 0 auto;
+    margin: auto;
     justify-content: center;
-    width: 40vw;
-    height: 32vh;
+    width: 45vw;
+    height: 35vh;
     padding-left: 1vw;
     padding-right: 1vw;
-    min-height: 270px;
     overflow: hidden;
 }
 .slideTopcs{
     display: flex;
     width: 50vw;
     height: 40vh;
+    overflow: hidden;
+    scroll-behavior: auto;
     padding-top: 1vh;
 }
 .slideTopcs input{
@@ -35,7 +38,7 @@
 }
 
 .slideItem{
-    width: 40vw;
+    width: 45vw;
     height: 35vh;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -47,9 +50,17 @@
     transition: 1s;
 }
 
+#visaoID{
+    margin-top: -0.5vh;
+}
+
+
+#visaoID p{
+    font-size: 0.92em;
+}
 .conteudoSlide{
     width: 36vw;
-    height: 30vh;
+    height: auto;
     align-items: center;
     text-align: center;
     margin: 2vh 2vw;
@@ -109,4 +120,66 @@
     display: flex;
     justify-content: center;
     margin-right: 10px;
+}
+}
+
+@media(max-width: 749px) {
+    .boxConteudoInicio{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 30vh;
+        margin-bottom: 15vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .logoEmpresa{
+        display: none;
+        position: absolute;
+    }
+    
+    .barraVertical{
+        display: none;
+        position: absolute;
+    }
+    .slideTopcs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .slideTopcs input{
+        display: none;
+    }
+    .slideTopcs h3{
+        color: var(--color-font-primary);
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+    }
+    
+    .slideTopcs p{
+        color: var(--color-font-dark);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        text-align: justify;
+        letter-spacing: 0.05em;
+        padding-bottom: 4vh;
+    }
+    
+    .slideItem{
+        width: 85vw;
+        height: auto;
+        text-align: center;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        margin-bottom: 3vh;
+        background-image: url(/imgs/bg-slide.svg);
+        background-size: 100% auto;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background-color: var(--color-bg-primary);
+        transition: 1s;
+    }
 }
