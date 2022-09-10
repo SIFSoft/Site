@@ -49,13 +49,14 @@
     background-color: var(--color-bg-primary);
     transition: 1s;
 }
+@media(max-width: 955px){
+    #visaoID{
+        margin-top: 1vh;
+    }
 
-#visaoID{
-    margin-top: -0.5vh;
-}
-
-#visaoID p{
-    font-size: 0.882em;
+    #visaoID p{
+        font-size: 0.882em;
+    }
 }
 .conteudoSlide{
     width: 38vw;
