@@ -342,9 +342,6 @@ Main{
     margin-bottom: 0.5em;
 }
 
-.footer-sociais{
-    margin-right: 10vw;
-}
 
 .endereco-local{
     font-weight: 500;
@@ -354,8 +351,21 @@ Main{
 .endereco-local:hover{
     color: var(--color-font-primary);
 }
-.endereco-local i {
-    margin-right: 1vw;
+
+@media (max-width: 700px){
+    .footer-sociais{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 0.8em;
+    }
+    .footer-sociais i {
+        margin-right: 2vw;
+    }
+}
+@media (min-width: 701px){
+    .footer-sociais{
+        margin-right: 10vw;
+    }
 }
 .endereco-local div{
     display: flex;
