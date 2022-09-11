@@ -238,16 +238,11 @@ Main{
 .conteudo-sobre{
     display: flex;
     margin-top: 2vh;
-    padding-left: 4vw;
-    justify-content: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    justify-content: space-between;
     align-items: center;
     padding-top: 10vh;
-}
-
-.text-sobre{
-    font-family: 'Roboto';
-    width: 60vw;
-    margin-bottom: 5vh;
 }
 
 .text-sobre p{
@@ -265,23 +260,51 @@ Main{
     color: var(--color-font-primary);
 }
 
-.linhaHoriz{
-    width: 90%;
-    align-items: center;
-    margin-bottom: 4vh;
-}
-
-
 .lineSvg{
     stroke: var(--logo-fill);
     stroke-width: 1.5vh;
 }
 
-.img-sobre img{
-    grid-area: img;
-    width: 20vw;
-    height: 50vh;
+@media (min-width: 750px){
+    .linhaHoriz{
+        width: 60vw;
+        align-items: center;
+        margin-bottom: 4vh;
+    }
+    .text-sobre{
+        font-family: 'Roboto';
+        width: 60vw;
+        margin-bottom: 5vh;
+    }
+    .img-sobre img{
+        grid-area: img;
+        width: 20vw;
+        min-width: 220px;
+        height: auto;
+    }
 }
+
+@media (max-width: 749px){
+    .linhaHoriz{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4vh;
+    }
+    .text-sobre{
+        font-family: 'Roboto';
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .img-sobre img{
+        width: 0;
+        height: 0;
+    }
+}
+
 
 .center {
     text-align: center;

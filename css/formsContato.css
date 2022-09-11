@@ -1,28 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 
-.boxButtomForm{
-    position: fixed;
-    bottom: 6.5vh;
-    right: -9vw;
-    transition: linear 300ms;
-}
-.formContatobtn{
-    width: 13vw;
-    height: 7.5vh;
-    background-color: #49556C;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px 0px 0px 10px;
+/*
+*   botão em telas maiores que 750px.
+*/
+@media (min-width: 750px){
+    .boxButtomForm{
+        position: fixed;
+        z-index: 5;
+        bottom: 6.5vh;
+        right: -9vw;
+        transition: linear 300ms;
+    }
+    .formContatobtn{
+        width: 13vw;
+        height: 7.5vh;
+        background-color: #49556C;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .boxButtomForm :hover{
+        transition: linear 300ms;
+        transform: translateX(-7.5vw);
+    }
+
+    #btnContatoInicio :hover ~ .boxButtomForm{
+        transition: linear 300ms;
+        transform: translateX(-7.5vw);
+    }
+    .itensBtnContat p{
+        color: white;
+        font-size: 1.7em;
+        margin-left: 1vw;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    #envelopIcon{
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+        font-size: 2em;
+        color: white;
+    }
 }
 
-.boxButtomForm :hover{
-    transition: linear 300ms;
-    transform: translateX(-7.5vw);
-}
+/*
+*   botão em telas menores que 750px.
+*/
 
-#btnContatoInicio :hover ~ .boxButtomForm{
-    transition: linear 300ms;
-    transform: translateX(-7.5vw);
+@media (max-width: 749px){
+    .boxButtomForm{
+        position: fixed;
+        z-index: 5;
+        bottom: 6.5vh;
+        right: -15vw;
+        transition: linear 300ms;
+    }
+    .formContatobtn{
+        width: 22vw;
+        height: 7.5vh;
+        background-color: #49556C;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .boxButtomForm :hover{
+        transition: linear 300ms;
+        transform: translateX(-13vw);
+    }
+
+    #btnContatoInicio :hover ~ .boxButtomForm{
+        transition: linear 300ms;
+        transform: translateX(-13vw);
+    }
+    .itensBtnContat p{
+        color: white;
+        font-size: 2.7em;
+        margin-left: 2vw;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    #envelopIcon{
+        text-align: center;
+        justify-content: center;
+        margin-left: 1vw;
+        font-size: 3.5em;
+        color: white;
+    }
 }
 
 .itensBtnContat{
@@ -36,24 +104,9 @@
     align-items: center;
 }
 
-.itensBtnContat p{
-    color: white;
-    font-size: 1.7em;
-    margin-left: 1vw;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-
-#envelopIcon{
-    text-align: center;
-    justify-content: center;
-    margin-left: 0;
-    font-size: 2em;
-    color: white;
-}
 .forms{
     position: fixed;
-    z-index: 5;
+    z-index: 8;
     border-radius: 5px;
     background-color: #49556C;
     padding: 10px;
