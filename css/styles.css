@@ -271,6 +271,16 @@ Main{
         align-items: center;
         margin-bottom: 4vh;
     }
+    .text-img{
+        color: var(--color-font-secondary);
+        font-size: 0.5em;
+        font-family: 'Roboto';
+        font-weight: 300;
+    }
+    
+    .text-img:hover{
+        color: var(--color-font-primary);
+    }
     .text-sobre{
         font-family: 'Roboto';
         width: 60vw;
@@ -290,16 +300,6 @@ Main{
     align-items: center;
 }
 
-.text-img{
-    color: var(--color-font-secondary);
-    font-size: 0.5em;
-    font-family: 'Roboto';
-    font-weight: 300;
-}
-
-.text-img:hover{
-    color: var(--color-font-primary);
-}
 
 @media (max-width: 749px){
     .linhaHoriz{
@@ -316,9 +316,11 @@ Main{
         width: 100%;
         margin-bottom: 5vh;
     }
+    .text-img{
+        display: none;
+    }
     .img-sobre img{
-        width: 0;
-        height: 0;
+        display: none;
     }
 }
 
