@@ -539,9 +539,10 @@ Main{
     }
 
     #btnMode{
-        position: absolute;
-        right: 20vw;
-        top: 3vh;
+        position: fixed;
+        right: 10vw;
+        top: 1.3vh;
+        width: 4vw;
     }
 
 }
