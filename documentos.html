@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="js/theme.js" defer></script>
     <script src="js/documentos.js" defer></script>
-    <script src="js/forms.js"></script>
+    <script src="js/forms.js" defer></script>
+    <script src="js/menu.js" defer></script>
 
 </head>
 <body id="conteiner" class="light">
@@ -34,6 +35,10 @@
             </a>
         </div>
         <div class="menu">
+            <div class="menu-btn">
+                <i class="fa fa-bars fa-x2" onclick="menuVisivel()"></i>
+            </div>
+
             <ul class="itensMenu">
                 <li class="botãoMode" id="btnMode" onclick="theme(this.value);" value=0><span title="Modo Escuro."
                         onclick="theme()" id="modeD" class="material-symbols-outlined">dark_mode</span></li>

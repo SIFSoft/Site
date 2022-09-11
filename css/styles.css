@@ -23,6 +23,8 @@ html{
     --color-circle-primary: #F3D2F2;
     --color-mode: #2C6693;
     --color-bg-footer: #2e343d;
+    --color-bg-menu-responsivo: #ffffff;
+    --color-menu-icon: #15262E;
 }
 
 .dark{
@@ -39,6 +41,8 @@ html{
     --color-border-secondary: #fff;
     --color-circle-primary: #F3D2F2;
     --color-mode: #fff;
+    --color-bg-menu-responsivo: #242A38;
+    --color-menu-icon: #FFFFFF;
 }
 
 body{
@@ -107,11 +111,19 @@ Main{
     user-select: none;
 }
 
+.menu-btn i{
+    color: red;
+    cursor: pointer;
+    display: none;
+}
+
+/*Lista*/
 .itensMenu{
     display: flex;
     padding-right: 3vw;
 }
 
+/*Item da Lista*/
 .item{
     cursor: pointer;
     margin: 0 1vw;
@@ -487,4 +499,40 @@ Main{
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 920px){
+    .menu-btn i{
+        display: block;
+        color: var(--color-menu-icon);
+        margin-right: 2em;
+    }
+
+    .itensMenu{
+        margin: 0;
+        position: fixed;
+        right: -150%;   
+        background-color: var(--color-bg-menu-responsivo);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .itensMenu li{
+        margin-bottom: 3em;
+    }
+
+    .itensMenu.open{
+        left: 0;
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .menu-btn i{
+        z-index: 15;
+    }
 }
