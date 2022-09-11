@@ -284,6 +284,23 @@ Main{
     }
 }
 
+.img-sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-img{
+    color: var(--color-font-secondary);
+    font-size: 0.5em;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.text-img:hover{
+    color: var(--color-font-primary);
+}
+
 @media (max-width: 749px){
     .linhaHoriz{
         width: 100%;
