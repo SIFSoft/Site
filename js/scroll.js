@@ -7,6 +7,7 @@ if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
 // Chama a função ``scrollShandow()`` conforme se scrolla a página.
 window.onscroll = function () {
   scrollShandow();
+  visivelButton();
 };
 
 // Função ``scrollShandow()`` verificar qual botão do navbar será desabilitado conforme a posição do scroll.
