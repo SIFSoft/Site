@@ -85,14 +85,24 @@ Main{
     cursor: pointer;
     text-decoration: none;
     list-style: none;
+    margin-right: 1.5vw;
     transition: 1s ease-in-out;
+}
+
+#modeD:hover{
+    color: var(--color-font-primary);
+}
+
+#modeC:hover{
+    color: var(--color-font-primary);
 }
 
 #modeD{
     color: var(--color-mode);
     height: 30px;
     width: 30px;
-    line-height : 30px;
+    font-size: 1.2em;
+    line-height : 2;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: -moz-none;
@@ -103,7 +113,8 @@ Main{
     color: var(--color-mode);
     height: 30px;
     width: 30px;
-    line-height : 30px;
+    font-size: 1.2em;
+    line-height: 2;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: -moz-none;
@@ -551,4 +562,8 @@ Main{
         top: 1.3vh;
         width: 4vw;
     }
+}
+
+.theme{
+    transition: 0.5s;
 }

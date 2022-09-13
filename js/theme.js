@@ -19,20 +19,20 @@ return JSON.parse(objSalvo);
 
 // Função para mudar o tema conforme o valor do checkbox ao ser clicado.
 function theme(valor) {
-    if (valor == 0) {
-      document.getElementById("btnMode").value = 1;
-      document.getElementById("btnMode").innerHTML =
-        "<span title='Modo Claro.' id='modeD' class='material-symbols-outlined'>light_mode</span>";
-      document.getElementById("conteiner").className = "dark";
-      tema.modo = 0;
-    } else if (valor == 1) {
-      document.getElementById("btnMode").value = 0;
-      document.getElementById("btnMode").innerHTML =
-        "<span title='Modo Escuro.' id='modeC' class='material-symbols-outlined'>dark_mode</span>";
-      document.getElementById("conteiner").className = "light";
-      tema.modo = 1;
-    }
-    salvaModo(tema)
+  if (valor == 0) {
+    document.getElementById("btnMode").value = 1;
+    document.getElementById("btnMode").innerHTML =
+      "<i class='bi bi-brightness-high-fill theme' id='modeD' title='Modo Claro.'></i>";
+    document.getElementById("conteiner").className = "dark";
+    tema.modo = 0;
+  } else if (valor == 1) {
+    document.getElementById("btnMode").value = 0;
+    document.getElementById("btnMode").innerHTML =
+    "<i class='bi bi-moon-stars-fill theme' id='modeC' title='Modo Escuro.'></i>"
+    document.getElementById("conteiner").className = "light";
+    tema.modo = 1;
+  }
+  salvaModo(tema)
 }
 
 // Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
