@@ -327,7 +327,6 @@ Main{
     align-items: center;
 }
 
-
 @media (max-width: 749px){
     .linhaHoriz{
         width: 100%;
@@ -559,8 +558,15 @@ Main{
     #btnMode{
         position: fixed;
         right: 13vw;
-        top: 1.3vh;
+        top: 1%;
         width: 4vw;
+    }
+    @media (max-width: 390px) {
+        #btnMode{
+            right: 20%;
+            top: 1%;
+            width: 4vw;
+        }
     }
 }
 

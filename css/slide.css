@@ -128,10 +128,10 @@
 @media(max-width: 749px) {
     .boxConteudoInicio{
         display: flex;
-        position: relative;
+        position: static;
+        height: auto;
         flex-direction: column;
-        margin-top: 30vh;
-        margin-bottom: 15vh;
+        margin-top: 5vh;
         justify-content: center;
         align-items: center;
     }
@@ -147,10 +147,12 @@
     .slideTopcs{
         width: 100%;
         display: flex;
+        position: static;
         flex-direction: column;
     }
     .slideTopcs input{
         display: none;
+        position: absolute;
     }
     .slideTopcs h3{
         color: var(--color-font-primary);
