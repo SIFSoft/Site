@@ -40,7 +40,7 @@ async function getAllMembros() {
     indexDiretores.map((i) => {
         document.getElementById("loading-id-diretoria").style.visibility = 'hidden'
         document.getElementById("loading-id-diretoria").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataDiretores[i].linkRedeSocial}'>${icons[dataDiretores[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataDiretores[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataDiretores[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataDiretores[i].diretoria]}</span><span class='ano-membro'>${dataDiretores[i].ano}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataDiretores[i].linkRedeSocial}' target='_blank'>${icons[dataDiretores[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataDiretores[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataDiretores[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataDiretores[i].diretoria]}</span><span class='ano-membro'>${dataDiretores[i].ano}</span></div>`
         document.getElementById("cards-cont").innerHTML += cardHtml
     });
 
@@ -51,7 +51,7 @@ async function getAllMembros() {
     indexConselho.map((i) => {
         document.getElementById("loading-id-conselho").style.visibility = 'hidden'
         document.getElementById("loading-id-conselho").style.position = 'absolute'
-        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataConselho[i].linkRedeSocial}'>${icons[dataConselho[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataConselho[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataConselho[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataConselho[i].cargo]}</span><span class='card-text ano-membro'>${dataConselho[i].ano}</span></div>`
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataConselho[i].linkRedeSocial}' target='_blank'>${icons[dataConselho[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataConselho[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataConselho[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataConselho[i].cargo]}</span><span class='card-text ano-membro'>${dataConselho[i].ano}</span></div>`
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     

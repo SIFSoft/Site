@@ -69,18 +69,32 @@ thead{
     }
 }
 @media (min-width: 701px){
-th{
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
+    th{
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+    }
 
-td{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: var(--color-font-secondary);
-    padding: 1rem 2rem;
+    td{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: var(--color-font-secondary);
+        padding: 1rem 2rem;
+    }
 }
+@media (max-width: 550px) {
+    th{
+        padding: 2vh 1.5vw;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+    }
+    
+    td{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: var(--color-font-secondary);
+        padding: 2vh  1.5vw;
+    }
 }
 tr:nth-child(even){
     background-color: var(--color-bg-table-secondary);

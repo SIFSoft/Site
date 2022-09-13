@@ -7,9 +7,11 @@ function menuVisivel(){
         ul.classList.remove('open');
         body.style.removeProperty('overflow')
         console.log('remove')
+        btn.classList = "bi bi-list"
     }else{
         ul.classList.add('open');
         body.style.overflow = "none"
-        console.log('adciona')
+        console.log('adciona')   
+        btn.classList = "bi bi-x"
     }
 }

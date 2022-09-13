@@ -114,8 +114,13 @@ Main{
 .menu-btn i{
     cursor: pointer;
     display: none;
+    font-size: 2em;
+    line-height : 30px;
+    color: var(--color-bg-menu-responsivo);
 }
-
+.menu-btn i:hover{
+    color: var(--color-font-primary);
+}
 /*Lista*/
 .itensMenu{
     display: flex;
@@ -424,6 +429,8 @@ Main{
         margin-right: 10vw;
     }
 }
+
+
 .endereco-local div{
     display: flex;
     flex-direction: column;
@@ -511,7 +518,7 @@ Main{
         color: var(--color-font-primary);
     }
     .itensMenu{
-        margin-top: 4.5vh;
+        margin-top: 5.8vh;
         position: fixed;
         margin-left: 20vw;
         background-color: var(--color-bg-menu-responsivo);
@@ -540,9 +547,8 @@ Main{
 
     #btnMode{
         position: fixed;
-        right: 10vw;
+        right: 13vw;
         top: 1.3vh;
         width: 4vw;
     }
-
 }
