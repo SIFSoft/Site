@@ -578,6 +578,13 @@ Main{
     }
 }
 
+@media (max-width: 530px){
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .theme{
     transition: 0.5s;
 }
