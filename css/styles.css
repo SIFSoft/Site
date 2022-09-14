@@ -429,12 +429,14 @@ Main{
 }
 
 .email-footer{
-    margin-top: 2.1vh;
-    margin-bottom: 1vh;
+    margin-top: 3.5vh;
+    vertical-align: middle;
 }
-
+.email-footer i {
+    font-size: 0.8rem;
+}
 .email-footer span{
-    margin-left: 0.8vw;
+    margin-left: 1vw;
 }
 
 @media (max-width: 700px){
