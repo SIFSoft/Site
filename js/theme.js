@@ -1,9 +1,7 @@
 const NOME_ARQUIVO = "theme.json";
 
 // Variável para guardar o valor do tema atual selecionado.
-let tema = {
-    modo: 0,
-};
+let tema = 0;
 
 // Função para escrever no arquivo do modo salvo.
 function salvaModo(objeto) {
@@ -24,13 +22,13 @@ function theme(valor) {
     document.getElementById("btnMode").innerHTML =
       "<i class='bi bi-brightness-high-fill theme' id='modeD' title='Modo Claro.'></i>";
     document.getElementById("conteiner").className = "dark";
-    tema.modo = 0;
+    tema = 0;
   } else if (valor == 1) {
     document.getElementById("btnMode").value = 0;
     document.getElementById("btnMode").innerHTML =
     "<i class='bi bi-moon-stars-fill theme' id='modeC' title='Modo Escuro.'></i>"
     document.getElementById("conteiner").className = "light";
-    tema.modo = 1;
+    tema = 1;
   }
   salvaModo(tema)
 }
@@ -40,10 +38,10 @@ window.onload = function () {
     document.body.style.animation = 'none'
     tema = lerArquivoRanque();
     if (tema == null){
-        tema.modo = 1;
+        tema = 1;
     }
     document.getElementById("conteiner").style.transition = "0s ease-in-out";
-    theme(tema.modo)
+    theme(tema)
     document.getElementById("navbar").style.transition = "transition: 0.6s ease-in-out";
     document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
 }
