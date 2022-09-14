@@ -133,6 +133,7 @@
         height: auto;
         flex-direction: column;
         margin-top: 5vh;
+        margin-bottom: -8vh;
         justify-content: center;
         align-items: center;
     }

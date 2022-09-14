@@ -101,8 +101,7 @@ Main{
 
 #modeD{
     color: var(--color-mode);
-    height: 30px;
-    width: 30px;
+    padding: 5px;
     font-size: 1.2em;
     line-height : 2;
     -webkit-user-select: none;
@@ -113,8 +112,7 @@ Main{
 }
 #modeC{
     color: var(--color-mode);
-    height: 30px;
-    width: 30px;
+    padding: 5px;
     font-size: 1.2em;
     line-height: 2;
     -webkit-user-select: none;
@@ -227,6 +225,10 @@ Main{
     max-width: 300px;
     min-height: 30px;
     max-height: 40px;
+}
+
+.btn:hover{
+    background-color: var(--color-font-primary);
 }
 
 .btn-light{
@@ -395,7 +397,7 @@ Main{
 
 
 .footer{
-    height: 20vh;
+    height: 25vh;
     width: 100%;
     min-height: 110px;
     background-color: var(--color-bg-footer);
@@ -424,6 +426,15 @@ Main{
 }
 .endereco-local:hover{
     color: var(--color-font-primary);
+}
+
+.email-footer{
+    margin-top: 2.1vh;
+    margin-bottom: 1vh;
+}
+
+.email-footer span{
+    margin-left: 0.8vw;
 }
 
 @media (max-width: 700px){
@@ -572,7 +583,6 @@ Main{
     @media (max-width: 390px) {
         #btnMode{
             right: 20%;
-            top: 1vh;
             width: 4vw;
         }
     }
