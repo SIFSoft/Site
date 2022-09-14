@@ -50,7 +50,7 @@ body{
 }
 
 Main{
-    background-image: url(/imgs/bg.svg);
+    background: url(/imgs/bg.svg);
     background-position-y: -15vh;
     background-size: 100% auto;
     background-repeat: repeat-y;
