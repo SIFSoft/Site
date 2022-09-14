@@ -54,6 +54,17 @@ thead{
     background-color: var(--color-bg-table);
 }
 
+.botaoView{
+    transition: 1s;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--color-font-secondary);
+    background-color: rgba(255, 255, 255, 0);
+    width: 50%;
+    font-size: 1.1rem;
+}
+
 @media (max-width: 700px) {
     th{
         padding: 2vh 2.5vw;
@@ -68,6 +79,7 @@ thead{
         padding: 0.5rem  0.9em;
     }
 }
+
 @media (min-width: 701px){
     th{
         padding: 1rem 2rem;
@@ -85,30 +97,32 @@ thead{
 @media (max-width: 550px) {
     th{
         padding: 2vh 1.5vw;
-        text-transform: uppercase;
         letter-spacing: 0.1rem;
     }
     
     td{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        color: var(--color-font-secondary);
         padding: 2vh  1.5vw;
     }
 }
-tr:nth-child(even){
-    background-color: var(--color-bg-table-secondary);
+
+@media (max-width: 550px) {
+    .botaoView{
+        font-size: 1rem;
+    }
+    th{
+        padding: 2vh 0.9vw;
+        letter-spacing: 0.1rem;
+        font-size: 0.8em;
+    }
+    
+    td{
+        font-size: 0.8em;
+        padding: 1.3vh  1%;
+    }
 }
 
-.botaoView{
-    transition: 1s;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    color: var(--color-font-secondary);
-    background-color: rgba(255, 255, 255, 0);
-    width: 50%;
-    font-size: 1.1rem;
+tr:nth-child(even){
+    background-color: var(--color-bg-table-secondary);
 }
 
 .botaoView:hover{
