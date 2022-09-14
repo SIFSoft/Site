@@ -46,6 +46,7 @@
     background-size: 100% auto;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    max-height: 250px;
     background-color: var(--color-bg-primary);
     transition: 1s;
 }
@@ -179,6 +180,7 @@
         padding-left: 2.5vw;
         padding-right: 2.5vw;
         margin-bottom: 3vh;
+        
         background-image: url("../imgs/bg-slide.svg");
         background-size: 100% auto;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);

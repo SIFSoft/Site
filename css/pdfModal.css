@@ -74,3 +74,13 @@
     font-weight: 600;
     justify-content: center;
 }
+
+@media (max-width: 660px) {
+    .botão-Fechar{
+        text-align: center;
+        cursor: pointer;
+        margin-right: 2.5vw;
+        margin-top: 0.5vh;
+        width: 10vw;
+    }
+}
