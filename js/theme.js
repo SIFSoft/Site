@@ -35,13 +35,14 @@ function theme(valor) {
 
 // Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
 window.onload = function () {
-    document.body.style.animation = 'none'
     tema = lerArquivoRanque();
     if (tema == null){
         tema = 1;
     }
-    document.getElementById("conteiner").style.transition = "0s ease-in-out";
     theme(tema)
-    document.getElementById("navbar").style.transition = "transition: 0.6s ease-in-out";
-    document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
+    setInterval(function () {
+      document.getElementById("navbar").style.transition = "0.5s ease-in-out";
+      document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
+      document.document.querySelector("slideItem").setAttribute('style', 'transition: 1s');
+    }, 700);
 }
