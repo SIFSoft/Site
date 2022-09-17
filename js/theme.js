@@ -43,6 +43,5 @@ window.onload = function () {
     setInterval(function () {
       document.getElementById("navbar").style.transition = "0.5s ease-in-out";
       document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
-      document.document.querySelector("slideItem").setAttribute('style', 'transition: 1s');
     }, 700);
 }
