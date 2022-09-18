@@ -21,5 +21,5 @@ function enviadoSucesso(){
 function escondeSucess(){
     setInterval(function () {
         window.open('#fechar', '_self')
-    }, 5000);
+    }, 6000);
 }
