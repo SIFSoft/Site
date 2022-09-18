@@ -3,11 +3,13 @@ if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
   document.getElementById("btnInicio").className = "itemDesabilitado";
   document.getElementById("linkInicio").style.cursor = "default";
 }
-
 // Chama a função ``scrollShandow()`` conforme se scrolla a página.
 window.onscroll = function () {
   scrollShandow();
   visivelButton();
+  if(document.baseURI.indexOf('#sucess') > 0){
+    window.location.href = window.location.href.replace('#sucess', '#fechar');
+  }
 };
 
 // Função ``scrollShandow()`` verificar qual botão do navbar será desabilitado conforme a posição do scroll.
@@ -44,8 +46,6 @@ function scrollShandow() {
       document.getElementById("btnEquipe").className = "itemDesabilitado";
       document.getElementById("linkEquipe").style.cursor = "default";
     }
-
-
 }
 
 

@@ -17,9 +17,3 @@ function enviadoSucesso(){
         document.getElementById("sucess").style.visibility = 'hidden'
       }, 3000);
 }
-
-function escondeSucess(){
-    setInterval(function () {
-        window.open('#fechar', '_self')
-    }, 6000);
-}
