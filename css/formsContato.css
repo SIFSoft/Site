@@ -7,7 +7,7 @@
     .boxButtomForm{
         position: fixed;
         z-index: 5;
-        bottom: 6.5vh;
+        bottom: 9vh;
         right: -9vw;
         transition: linear 300ms;
     }
@@ -54,7 +54,7 @@
     .boxButtomForm{
         position: fixed;
         z-index: 5;
-        bottom: 6.5vh;
+        bottom: 9vh;
         right: -15vw;
         transition: linear 300ms;
     }
@@ -112,7 +112,7 @@
     padding: 10px;
     width: 300px;
     height: 400px;
-    bottom: 6.5vh;
+    bottom: 9vh;
     right: 1vw;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.212);
 }
@@ -225,27 +225,19 @@
 
 .sucessEnvio{
     position: fixed;
+    z-index: 10;
     opacity: 0;
-    visibility: hidden;
-    padding: 10px;
-    width: 300px;
-    height: 35px;
-    bottom: 4.5vh;
-    right: 0.5vw;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background-color: #62B269;
-    font-size: 0.7em;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
+    pointer-events: none;
+    width: auto;
+    height: 7.5vh;
+    bottom: 9vh;
+    right: 10vw;
+    border-radius: 5px;
     transition: 400ms ease-in;
 }
-
-.sucessEnvio h1{
-    height: 100%;
-    line-height: 1.5;
-    justify-content: center;
+.sucessEnvio:target {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media (max-height: 500px){
