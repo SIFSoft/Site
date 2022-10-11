@@ -6,14 +6,19 @@
     <title>SIFSoft - Empresa Júnior</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="icon" type="imagem/png" href="imgs/icon.png" />
 
+    <!--Folhas de estilo:-->
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link href="css/slide.css" rel="stylesheet" type="text/css" />
     <link href="css/card.css" rel="stylesheet" type="text/css" />
     <link href="css/formsContato.css" rel="stylesheet" type="text/css" />
+    <link href="css/navBar.css" rel="stylesheet" type="text/css"/>
+
+    <!--Frameworks:-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--Script:-->
     <script src="js/scroll.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/membro.js" defer></script>
@@ -23,6 +28,9 @@
 </head>
 
 <body id="conteiner" class="light">
+
+    <!--Menu Navbar-->
+    
     <Header class="header" id="navbar">
         <div class="logo">
             <a href="#inicio">
@@ -42,9 +50,9 @@
             <ul class="itensMenu">
                 <li class="botãoMode" id="btnMode" onclick="theme(this.value);" value=0>
                     <i class='bi bi-moon-stars-fill theme' id='modeC' title='Modo Escuro.'></i></li>
-                <li class="item" id="btnInicio"><a class="links" id="linkInicio" href="#inicio">Inicio</a></li>
-                <li class="item" id="btnSobre"><a class="links" id="linkSobre" href="#sobre">Sobre</a></li>
-                <li class="item" id="btnEquipe"><a class="links" id="linkEquipe" href="#equipe">Equipe</a></li>
+                <li class="item" id="btnInicio"><a class="links" id="linkInicio" href="/#inicio">Inicio</a></li>
+                <li class="item" id="btnSobre"><a class="links" id="linkSobre" href="/#sobre">Sobre</a></li>
+                <li class="item" id="btnEquipe"><a class="links" id="linkEquipe" href="/#equipe">Equipe</a></li>
                 <li class="item" id="btnDocs"><a class="links" href="documentos">Docs</a></li>
             </ul>
             <div class="menu-btn">
@@ -52,7 +60,9 @@
             </div>
         </div>
     </Header>
+    
     <!-- Formulário de contatos e botão para acessar o modal. -->
+
     <a class="boxButtomForm" id="idBoxForm" onclick="escondeButton()" href="#formsModal">
         <button class="formContatobtn">
             <div class="itensBtnContat">
@@ -87,6 +97,7 @@
     </div>
     <img src="imgs/sucess.svg" alt="" class="sucessEnvio" id="sucess">
     <!---------------------------------------------------------->
+
     <Main>
         <section class="conteudo" id="inicio">
             <div>
@@ -214,6 +225,8 @@
             </div>
         </section>
     </Main>
+
+    <!----------------------------------------------------------->
 
     <footer class="footer">
         <div class="endereco">

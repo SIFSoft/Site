@@ -93,3 +93,10 @@
     font-size: 1em;
     font-weight: 500;
 }
+
+@media (max-width: 530px){
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+    }
+}

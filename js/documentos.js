@@ -4,6 +4,7 @@ const carregando = document.querySelector('.carregando');
 const documentsContainer = document.querySelector('.document-container')
 let tbody = document.querySelector('.tbody')
 
+// Função para pegar as informações dos documentos na api.
 async function getAllDocuments(){
     const response = await fetch(url)
     document.getElementById("loading-id").style.visibility = 'visibility'
@@ -45,13 +46,15 @@ async function getAllDocuments(){
 
 getAllDocuments();
 
-
+// Função para abrir o modal de visualização dos documentos.
 function openModaldocumets(link, title){
     document.getElementById("modal-pdf-id").style.visibility = 'visible'
     document.getElementById("modal-pdf-id").style.opacity = '1'
     document.getElementById("pdf-view-id").src = `${link}`;
     document.getElementById("tituloDocsPdf").textContent = title;
 }
+
+// Função para fechar o modal de visualização dos documentos.
 function closeModaldocumets(){
     document.getElementById("modal-pdf-id").style.opacity = '0'
     document.getElementById("modal-pdf-id").style.visibility = 'hidden'

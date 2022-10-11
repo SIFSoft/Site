@@ -18,6 +18,7 @@ let icons = {
     'twitter': '<i class="bi bi-twitter"></i>'
 }
 
+// Ordena os dados pegos na api conforme o campo informado, retorna uma linta com os indexs dos dados ordenados.
 function sortIndex(data, campo, ordem){
     let ordemIndex = [];
     for (const element of ordem){
@@ -29,6 +30,7 @@ function sortIndex(data, campo, ordem){
     }
     return ordemIndex;
 }
+
 // pega os dados da api, para inserir os cards.
 async function getAllMembros() {
 
