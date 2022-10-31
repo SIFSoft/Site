@@ -395,7 +395,7 @@ Main{
   } 
 }
 
-#loading-id-conselho, #loading-id-diretoria{
+#loading-id-conselho, #loading-id-diretoria, #loading-id-docentes{
     width: 100%;
     margin-top: 2vh;
     position: relative;

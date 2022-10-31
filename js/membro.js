@@ -7,6 +7,8 @@ let cargo = {
     'Market': 'Diretor(a) de Marketing',
     'RH': 'Diretor(a) de Gestão de Pessoa',
     'MembEfet': 'Membro Efetivo',
+    'coorde': 'Coordenador',
+    'co-coorde': 'Co-coordenador',
 }
 
 // Coloca o icone a partir das tags da api.
@@ -57,7 +59,17 @@ async function getAllMembros() {
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     
-    
+    const response2 = await fetch("https://sifsoft-api.herokuapp.com/teachers/?format=json");
+    const dataDocentes = await response2.json();
+    let indexDocentes = sortIndex(dataDocentes, 'cargo', Object.keys(cargo));
+
+    document.getElementById("loading-id-diretoria").style.visibility = 'visibility'
+    indexDocentes.map((i) => {
+        document.getElementById("loading-id-docentes").style.visibility = 'hidden'
+        document.getElementById("loading-id-docentes").style.position = 'absolute'
+        let cardHtml = `<div class='card'><div class='social-membro'><a href='${dataDocentes[i].linkRedeSocial}' target='_blank'>${icons[dataDocentes[i].iconTypeRedeSocial]}</a></div><img class='foto-membro' src='${dataDocentes[i].image_perfil}' alt=''><span class='card-text nome-membro'>${dataDocentes[i].nome}</span><span class='card-text cargo-membro'>${cargo[dataDocentes[i].cargo]}</span><span class='ano-membro'>${dataDocentes[i].ano}</span></div>`
+        document.getElementById("cards-docente").innerHTML += cardHtml
+    });
 }
 
 getAllMembros();
