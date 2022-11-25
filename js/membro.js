@@ -36,7 +36,7 @@ function sortIndex(data, campo, ordem){
 // pega os dados da api, para inserir os cards.
 async function getAllMembros() {
 
-    const response1 = await fetch("https://sifsoft-api.herokuapp.com/directors/?format=json");
+    const response1 = await fetch("https://sifsoft-api.fly.dev/directors/?format=json");
     const dataDiretores = await response1.json();
     let indexDiretores = sortIndex(dataDiretores, 'diretoria', Object.keys(cargo));
 
@@ -48,7 +48,7 @@ async function getAllMembros() {
         document.getElementById("cards-cont").innerHTML += cardHtml
     });
 
-    const response = await fetch("https://sifsoft-api.herokuapp.com/auditCommittee/?format=json");
+    const response = await fetch("https://sifsoft-api.fly.dev/auditCommittee/?format=json");
     const dataConselho = await response.json();
     document.getElementById("loading-id-conselho").style.visibility = 'visibility'
     let indexConselho = sortIndex(dataConselho, 'cargo', Object.keys(cargo));
@@ -59,7 +59,7 @@ async function getAllMembros() {
         document.getElementById("cards-conselho").innerHTML += cardHtml
     });
     
-    const response2 = await fetch("https://sifsoft-api.herokuapp.com/teachers/?format=json");
+    const response2 = await fetch("https://sifsoft-api.fly.dev/teachers/?format=json");
     const dataDocentes = await response2.json();
     let indexDocentes = sortIndex(dataDocentes, 'cargo', Object.keys(cargo));
 

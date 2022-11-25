@@ -1,4 +1,4 @@
-const url = 'https://sifsoft-api.herokuapp.com/documents/?format=json'
+const url = 'https://sifsoft-api.fly.dev/documents/?format=json'
 
 const carregando = document.querySelector('.carregando');
 const documentsContainer = document.querySelector('.document-container')
