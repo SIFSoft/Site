@@ -178,16 +178,5 @@
         max-width: 2em;
         top: 1%;
     }
-    @media (max-height: 668px){
-        .itensMenu{
-            margin-top: 35px;
-        }
-    }
-    @media (max-width: 390px) {
-        #btnMode{
-            right: 20%;
-            width: 4vw;
-        }
-    }
 }
 
