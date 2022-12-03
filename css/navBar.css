@@ -152,9 +152,13 @@
         height: 0;
     }
     @media (max-height: 530px) {
-        .itensMenu{
-            margin-top: 2.2em;
+        .header{
+            height: 2.9em;
         }
+        .itensMenu{
+            margin-top: 2.4em;
+        }
+
     }
     @media (min-height: 531px) {
         .itensMenu{
