@@ -308,3 +308,9 @@
         height: 35px;
     }
 }
+
+@media (max-height: 400px) {
+    .formContatobtn{
+        height: 3em;
+    }
+}
