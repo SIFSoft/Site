@@ -46,4 +46,6 @@ function loadTheme() {
     }, 700);
 }
 
-loadTheme();
+window.onload = function() {
+  loadTheme();
+}
