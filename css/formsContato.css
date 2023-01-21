@@ -202,7 +202,7 @@
     pointer-events: auto;
 }
 
-.forms {
+.forms{
     z-index: 6;
     opacity:0;
     transition: 400ms ease-in;

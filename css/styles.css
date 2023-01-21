@@ -81,8 +81,7 @@ Main{
 .btn-space-between{
     display: flex;
     justify-content: space-between;
-    width: 30vw;
-    max-width: 280px;
+    width: 20vw;
     min-width: 220px;
 }
 
@@ -94,8 +93,9 @@ Main{
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
+    font-size: 1em;
     max-width: 300px;
-    min-height: 30px;
+    min-height: 2.5em;
     max-height: 40px;
 }
 

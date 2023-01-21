@@ -34,7 +34,7 @@ function theme(valor) {
 }
 
 // Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
-window.onload = function () {
+function loadTheme() {
     tema = lerArquivoRanque();
     if (tema == null){
         tema = 1;
@@ -45,3 +45,5 @@ window.onload = function () {
       document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
     }, 700);
 }
+
+loadTheme();
