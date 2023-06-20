@@ -5,7 +5,7 @@ let cargo = {
     'Proj': 'Diretor(a) de Projetos',
     'Fin': 'Diretor(a) Financeiro',
     'Market': 'Diretor(a) de Marketing',
-    'RH': 'Diretor(a) de Gestão de Pessoa',
+    'RH': 'Diretor(a) de Gestão de Pessoas',
     'MembEfet': 'Membro Efetivo',
     'coorde': 'Coordenador',
     'co-coorde': 'Co-coordenador',

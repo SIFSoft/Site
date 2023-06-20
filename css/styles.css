@@ -267,19 +267,6 @@ Main{
     padding-left: 2.5vw;
 }
 
-
-.footer{
-    height: 25vh;
-    width: 100%;
-    min-height: 110px;
-    background-color: var(--color-bg-footer);
-    display: flex;
-    align-items: center;
-    color: var(--color-font-light);
-    font-family: Roboto;
-    justify-content: space-between;
-}
-
 .endereco{
     margin-left: 3vw;
     display: flex;
@@ -311,7 +298,7 @@ Main{
     margin-left: 1vw;
 }
 
-@media (max-width: 700px){
+@media  only screen and (min-width: 501px) and (max-width: 700px){
     .footer-sociais{
         margin-left: 5vw;
         margin-right: 5vw;
@@ -320,10 +307,55 @@ Main{
     .footer-sociais i {
         margin-right: 2vw;
     }
+    .footer{
+        height: 25vh;
+        width: 100%;
+        min-height: 110px;
+        background-color: var(--color-bg-footer);
+        display: flex;
+        align-items: center;
+        color: var(--color-font-light);
+        font-family: 'Roboto', sans-serif;
+        justify-content: space-between;
+    }
 }
 @media (min-width: 701px){
     .footer-sociais{
         margin-right: 10vw;
+    }
+    .footer{
+        height: 25vh;
+        width: 100%;
+        min-height: 110px;
+        background-color: var(--color-bg-footer);
+        display: flex;
+        align-items: center;
+        color: var(--color-font-light);
+        font-family: 'Roboto', sans-serif;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 500px){
+    .footer{
+        height: auto;
+        width: 100%;
+        background-color: var(--color-bg-footer);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--color-font-light);
+        font-family: 'Roboto', sans-serif;
+        justify-content: space-evenly;
+        padding-bottom: 2em;
+        padding-top: 2em;
+
+    }
+    .footer-sociais{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 1.5em;
+        font-size: 0.8em;
     }
 }
 
@@ -406,4 +438,11 @@ Main{
 
 .theme{
     transition: 0.5s;
+}
+
+.cnpj-footer{
+    margin-top: 0.5em;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-bottom: 0;
 }
