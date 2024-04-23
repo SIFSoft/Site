@@ -36,9 +36,9 @@ function sortIndex(data, campo, ordem){
 // pega os dados da api, para inserir os cards.
 async function getAllMembros() {
 
-    const response = await fetch("https://sifsoft-api.fly.dev/auditCommittee/?format=json");
-    const response1 = await fetch("https://sifsoft-api.fly.dev/directors/?format=json");
-    const response2 = await fetch("https://sifsoft-api.fly.dev/teachers/?format=json");
+    const response = await fetch("https://sifsoft-api-production.up.railway.app/auditCommittee/?format=json");
+    const response1 = await fetch("https://sifsoft-api-production.up.railway.app/directors/?format=json");
+    const response2 = await fetch("https://sifsoft-api-production.up.railway.app/teachers/?format=json");
 
     const dataConselho = await response.json();
     const dataDiretores = await response1.json();
