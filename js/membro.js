@@ -7,8 +7,8 @@ let cargo = {
     'Market': 'Diretor(a) de Marketing',
     'RH': 'Diretor(a) de Gestão de Pessoas',
     'MembEfet': 'Membro Efetivo',
-    'coorde': 'Coordenador',
-    'co-coorde': 'Co-coordenador',
+    'coorde': 'Pesquisador',
+    'co-coorde': 'Coordenador de Curso',
 }
 
 // Coloca o icone a partir das tags da api.
